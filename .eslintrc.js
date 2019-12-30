@@ -30,11 +30,6 @@ module.exports = {
     "no-underscore-dangle": "off",
     camelcase: "off",
     "no-console": ["error", { allow: ["tron"] }],
-    "jsx-a11y/label-has-for": [ 2, {
-      "required": {
-          "every": [ "id" ]
-      }
-    }]
   },
 
     // "react-hooks/rules-of-hooks": "error",
