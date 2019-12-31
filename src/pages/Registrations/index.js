@@ -1,7 +1,93 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { MdDone, MdClear } from 'react-icons/md';
 
+import { Container, Title, Table } from '~/styles/table';
 // import { Container } from './styles';
 
 export default function Registrations() {
-  return <div />;
+  return (
+    <Container>
+      <div>
+        <Title>
+          <span>Student list</span>
+          <div>
+            <button type="button">Insert new</button>
+            <input name="search" type="text" placeholder="search student" />
+          </div>
+        </Title>
+        <Table>
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Active</th>
+              <th />
+              <th />
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Aluno 1</td>
+              <td>aluno@email.com</td>
+              <td>27</td>
+              <td>
+                <MdClear />
+              </td>
+              <td className="btn__action">
+                <Link to="/" className="btn__action--edit">
+                  Edit
+                </Link>
+              </td>
+              <td className="btn__action">
+                {' '}
+                <Link to="/" className="btn__action--delete">
+                  Delete
+                </Link>
+              </td>
+            </tr>
+            <tr>
+              <td>Aluno 1</td>
+              <td>aluno@email.com</td>
+              <td>27</td>
+              <td>
+                <MdDone />
+              </td>
+              <td className="btn__action">
+                <Link to="/" className="btn__action--edit">
+                  Edit
+                </Link>
+              </td>
+              <td className="btn__action">
+                {' '}
+                <Link to="/" className="btn__action--delete">
+                  Delete
+                </Link>
+              </td>
+            </tr>
+            <tr>
+              <td>Aluno 1</td>
+              <td>aluno@email.com</td>
+              <td>27</td>
+              <td>
+                <MdDone />
+              </td>
+              <td className="btn__action">
+                <Link to="/" className="btn__action--edit">
+                  Edit
+                </Link>
+              </td>
+              <td className="btn__action">
+                {' '}
+                <Link to="/" className="btn__action--delete">
+                  Delete
+                </Link>
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+    </Container>
+  );
 }
