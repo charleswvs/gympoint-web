@@ -1,9 +1,9 @@
 import React from 'react';
-import { MdDone, MdClear } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { Container, Title, Table } from './styles';
 
 export default function Students() {
+  // TODO make a global component for this table
   return (
     <Container>
       <div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Form, Input } from '@rocketseat/unform';
 
-import { Container, Title, Wrapper } from './styles';
+import { Container, Title, Wrapper } from '~/styles/form';
 
 export default function AddStudent() {
   return (
