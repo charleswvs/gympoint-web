@@ -1,21 +1,29 @@
 import React from 'react';
+import { Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
 import 'semantic-ui-css/semantic.min.css';
 
 import './config/ReactotronConfig';
 
-import { Router } from 'react-router-dom';
-import history from './services/history';
 import Routes from './routes';
+import history from './services/history';
+
+import { store, persistor } from './store';
 
 import GlobalStyles from './styles/global';
 
 function App() {
   return (
-    <Router history={history}>
-      <Routes />
-      <GlobalStyles />
-    </Router>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Router history={history}>
+          <Routes />
+          <GlobalStyles />
+        </Router>
+      </PersistGate>
+    </Provider>
   );
 }
 
