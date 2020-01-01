@@ -7,8 +7,9 @@ export const Container = styled.div`
   z-index: 100;
   top: 0;
   left: 0;
+  /* visibility: ${props => (props.visible ? 'visible' : 'hidden')}; */
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   overflow: hidden;
 
   display: flex;
@@ -20,13 +21,28 @@ export const Container = styled.div`
     z-index: 101;
     border-radius: 5px;
     margin: auto;
-    max-width: 480px;
+    min-width: 480px;
+    max-width: 540px;
     padding: 20px;
+    position: relative;
+
+    > button {
+      position: absolute;
+      top: 0;
+      right: 5px;
+      display: inline-block;
+      background: transparent;
+      border: 0;
+      color: #000;
+      font-weight: bold;
+      font-size: 24px;
+    }
 
     form {
       display: flex;
       flex-direction: column;
 
+      span,
       label {
         text-transform: uppercase;
         font-weight: bold;

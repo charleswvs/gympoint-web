@@ -1,20 +1,24 @@
-import React from 'react';
-import { Form, Input, Textarea } from '@rocketseat/unform';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { Form, Textarea } from '@rocketseat/unform';
 
 import { Container } from './styles';
 
-export default function Popup() {
+export default function Popup({ question, remove }) {
+  function handleVisible() {
+    remove('');
+  }
+
   return (
     <Container>
       <div>
-        <Form onClick="">
-          <label>Student&apos;s question</label>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-            minus corporis soluta facere tenetur reiciendis voluptatibus at
-            dolores quidem nisi, suscipit et. Accusantium, facilis earum.
-            Inventore in odio natus saepe!
-          </p>
+        <button type="button" onClick={handleVisible}>
+          &times;
+        </button>
+        <Form onSubmit="">
+          <span>Student&apos;s question</span>
+          <p>{question}</p>
           <label htmlFor="anwser">Your answer</label>
           <Textarea name="awnser" type="text" />
           <button type="submit">Send anwser</button>
@@ -23,3 +27,8 @@ export default function Popup() {
     </Container>
   );
 }
+
+Popup.propTypes = {
+  question: PropTypes.string.isRequired,
+  remove: PropTypes.func.isRequired,
+};

@@ -1,16 +1,20 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/control-has-associated-label */
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Title, Table } from '~/styles/table';
 import Popup from './Popup';
 // import { Container } from './styles';
 
 export default function HelpOrders() {
+  const [popup, setPopup] = useState([]);
+
   function renderAnswerPopup(question) {
-    return <Popup question={question} />;
+    setPopup(<Popup question={question} remove={setPopup} />);
   }
+
   return (
     <>
-      <Popup />
+      {popup}
       <Container>
         <div>
           <Title>

@@ -52,9 +52,13 @@ export const Table = styled.table`
 
     &--edit {
       color: #4d85ee;
+      background: transparent;
+      border: 0;
     }
     &--delete {
       color: #de3b3b;
+      background: transparent;
+      border: 0;
     }
   }
   thead {
