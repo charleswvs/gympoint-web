@@ -46,6 +46,11 @@ export const Wrapper = styled.div`
         border: 1px solid #eee;
         padding: 10px;
         margin-bottom: 10px;
+        border-radius: 5px;
+
+        &:hover {
+          border-color: rgba(34, 36, 38, 0.35);
+        }
       }
 
       > div {
@@ -59,6 +64,10 @@ export const Wrapper = styled.div`
           flex: 1;
           flex-direction: column;
           overflow: hidden;
+
+          &.visible {
+            overflow: visible;
+          }
 
           & + div {
             margin-left: 20px;

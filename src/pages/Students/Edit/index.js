@@ -1,52 +1,39 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Form, Input } from '@rocketseat/unform';
-import { Container, Title, Wrapper } from '~/styles/form';
+import FormWrapper from '~/components/FormWrapper';
 
 // import { Container } from './styles';
 
 export default function EditStudent() {
   return (
-    <Container>
-      <Title>
-        <span>Edit student</span>
-
+    <FormWrapper title="Add new student">
+      <Form>
         <div>
-          <button type="button" className="btn-back">
-            Go back
-          </button>
-          <button type="submit">Confirm</button>
+          <label htmlFor="name">Name</label>
+          <Input name="name" type="text" />
         </div>
-      </Title>
-
-      <Wrapper>
-        <Form>
-          <div>
-            <label htmlFor="name">Name</label>
-            <Input name="name" type="text" />
-          </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <Input name="email" type="text" />
-          </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <Input name="email" type="text" />
+        </div>
+        <div>
           <div>
             <div>
-              <div>
-                <label htmlFor="age">Age</label>
-                <Input name="age" type="text" />
-              </div>
-              <div>
-                <label htmlFor="weight">Weight</label>
-                <Input name="weight" type="text" />
-              </div>
-              <div>
-                <label htmlFor="height">Height</label>
-                <Input name="height" type="text" />
-              </div>
+              <label htmlFor="age">Age</label>
+              <Input name="age" type="text" />
+            </div>
+            <div>
+              <label htmlFor="weight">Weight</label>
+              <Input name="weight" type="text" />
+            </div>
+            <div>
+              <label htmlFor="height">Height</label>
+              <Input name="height" type="text" />
             </div>
           </div>
-        </Form>
-      </Wrapper>
-    </Container>
+        </div>
+      </Form>
+    </FormWrapper>
   );
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background: #f5f5f5;
-  padding: 30px 0px;
+  padding: 30px 0;
   height: 100%;
   overflow: visible;
 
@@ -26,7 +26,7 @@ export const Title = styled.div`
     button {
       background: #ee4d64;
       border: 0;
-      padding: 5px 10px;
+      padding: 10px 10px;
       border-radius: 5px;
       margin-right: 6px;
       color: #fff;

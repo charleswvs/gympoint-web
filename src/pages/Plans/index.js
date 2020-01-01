@@ -12,7 +12,6 @@ export default function Plans() {
           <span>Student list</span>
           <div>
             <button type="button">Insert new</button>
-            <input name="search" type="text" placeholder="search student" />
           </div>
         </Title>
         <Table>
