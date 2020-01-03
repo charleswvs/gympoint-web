@@ -26,10 +26,14 @@ export default function Routes() {
 
       <Route path="/students" exact component={Students} isPrivate />
       <Route path="/students/add" component={AddStudent} isPrivate />
-      <Route path="/students/edit" component={EditStudent} isPrivate />
+      <Route path="/students/:id/edit" component={EditStudent} isPrivate />
 
       <Route path="/registrations" exact component={Registrations} isPrivate />
-      <Route path="/registrations/add" component={AddRegistration} isPrivate />
+      <Route
+        path="/registrations/:id/add"
+        component={AddRegistration}
+        isPrivate
+      />
       <Route
         path="/registrations/edit"
         component={EditRegistration}
@@ -38,7 +42,7 @@ export default function Routes() {
 
       <Route path="/plans" exact component={Plans} isPrivate />
       <Route path="/plans/add" component={AddPlan} isPrivate />
-      <Route path="/plans/edit" component={EditPlan} isPrivate />
+      <Route path="/plans/:id/edit" component={EditPlan} isPrivate />
 
       <Route path="/help-orders" component={HelpOrders} isPrivate />
     </Switch>

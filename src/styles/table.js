@@ -23,7 +23,7 @@ export const Title = styled.div`
     display: flex;
     flex-direction: row;
 
-    button {
+    a {
       background: #ee4d64;
       border: 0;
       padding: 10px 10px;

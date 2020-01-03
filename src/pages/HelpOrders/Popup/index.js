@@ -5,15 +5,15 @@ import { Form, Textarea } from '@rocketseat/unform';
 
 import { Container } from './styles';
 
-export default function Popup({ question, remove }) {
-  function handleVisible() {
-    remove('');
+export default function Popup({ question, removeFunc }) {
+  function handleRemove() {
+    removeFunc('');
   }
 
   return (
     <Container>
       <div>
-        <button type="button" onClick={handleVisible}>
+        <button type="button" onClick={handleRemove}>
           &times;
         </button>
         <Form onSubmit="">
@@ -30,5 +30,5 @@ export default function Popup({ question, remove }) {
 
 Popup.propTypes = {
   question: PropTypes.string.isRequired,
-  remove: PropTypes.func.isRequired,
+  removeFunc: PropTypes.func.isRequired,
 };

@@ -13,8 +13,6 @@ export function* signIn({ payload }) {
       password,
     });
 
-    console.tron.log(response);
-
     const { token, user } = response.data;
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
@@ -23,9 +21,22 @@ export function* signIn({ payload }) {
 
     history.push('/students');
   } catch (err) {
-    console.log(err);
+    // TODO: show toast
     yield put(signInFailure());
   }
 }
 
-export default all([takeLatest('@auth/SIGN_IN_REQUEST', signIn)]);
+// loading
+export function setToken({ payload }) {
+  if (!payload) return;
+  const { token } = payload.auth;
+
+  if (token) {
+    api.defaults.headers.Authorization = `Bearer ${token}`;
+  }
+}
+
+export default all([
+  takeLatest('persist/REHYDRATE', setToken), // REHYDRATE runs when application is loaded
+  takeLatest('@auth/SIGN_IN_REQUEST', signIn),
+]);

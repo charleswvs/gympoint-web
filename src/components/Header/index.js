@@ -9,9 +9,7 @@ export default function Header() {
       <Content>
         <nav>
           <img src={logo} alt="gympoint-logo" />
-          <Linked to="/students" active>
-            STUDENTS
-          </Linked>
+          <Linked to="/students">STUDENTS</Linked>
           <Linked to="/registrations">REGISTRATIONS</Linked>
           <Linked to="/plans">PLANS</Linked>
           <Linked to="/help-orders">HELP ORDERS</Linked>

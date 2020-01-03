@@ -6,10 +6,10 @@ import Popup from './Popup';
 // import { Container } from './styles';
 
 export default function HelpOrders() {
-  const [popup, setPopup] = useState([]);
+  const [popup, setPopup] = useState('');
 
   function renderAnswerPopup(question) {
-    setPopup(<Popup question={question} remove={setPopup} />);
+    setPopup(<Popup question={question} removeFunc={setPopup} />);
   }
 
   return (
