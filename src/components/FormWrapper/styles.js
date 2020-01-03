@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: 30px auto;
-  width: 50%;
+  max-width: 500px;
+  min-width: 50%;
 `;
 export const Wrapper = styled.div`
   margin-top: 20px;
@@ -57,6 +58,7 @@ export const Wrapper = styled.div`
         > input {
           min-width: 100%;
           margin-right: 5px;
+          margin-top: auto;
           border: 1px solid #eee;
         }
       }

@@ -1,4 +1,5 @@
 import { all, takeLatest, call, put } from 'redux-saga/effects';
+import { toast } from 'react-toastify';
 
 import { signInSuccess, signInFailure } from './actions';
 import history from '~/services/history';
@@ -21,7 +22,7 @@ export function* signIn({ payload }) {
 
     history.push('/students');
   } catch (err) {
-    // TODO: show toast
+    toast.error("There's been an error, verify your data and try again");
     yield put(signInFailure());
   }
 }

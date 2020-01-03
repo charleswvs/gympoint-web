@@ -12,7 +12,6 @@ export default function FormWrapper({
   schema,
   initialData,
 }) {
-  // console.tron.log(props);
   return (
     <Container>
       <Form initialData={initialData} schema={schema} onSubmit={submitFunc}>

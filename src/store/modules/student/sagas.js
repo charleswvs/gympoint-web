@@ -1,5 +1,6 @@
 import { takeLatest, all, put, call } from 'redux-saga/effects';
 
+import { toast } from 'react-toastify';
 import {
   saveStudentFailure,
   saveStudentSuccess,
@@ -37,9 +38,10 @@ export function* includeStudent({ payload }) {
     }
 
     history.push('/students');
+    toast.success('Request finished successfuly!');
   } catch (err) {
-    // TODO: show toast
-    console.tron.log(err);
+    toast.error("There's been an error, please, verify your data ");
+
     yield put(saveStudentFailure());
   }
 }
@@ -60,7 +62,9 @@ export function* deleteStudent({ payload }) {
 
     yield call(api.delete, '/student', { id });
     yield put(deleteStudentSuccess(id));
+    toast.success('Request finished successfuly!');
   } catch (err) {
+    toast.error("There's been an error");
     yield put(deleteStudentFailure());
   }
 }

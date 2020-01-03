@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import { ToastContainer } from 'react-toastify';
 
 import 'semantic-ui-css/semantic.min.css';
 
@@ -21,6 +22,7 @@ function App() {
         <Router history={history}>
           <Routes />
           <GlobalStyles />
+          <ToastContainer autoClose={4000} />
         </Router>
       </PersistGate>
     </Provider>
