@@ -4,8 +4,6 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { ToastContainer } from 'react-toastify';
 
-import 'semantic-ui-css/semantic.min.css';
-
 import './config/ReactotronConfig';
 
 import Routes from './routes';

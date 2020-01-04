@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Dropdown } from 'semantic-ui-react';
 
 export const Container = styled.div`
   margin: 30px auto;

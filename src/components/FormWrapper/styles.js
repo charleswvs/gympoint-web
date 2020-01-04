@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: 30px auto;
-  max-width: 500px;
+  max-width: 720px;
   min-width: 50%;
 `;
+
 export const Wrapper = styled.div`
   margin-top: 20px;
   background: #fff;
@@ -26,6 +27,19 @@ export const Wrapper = styled.div`
       margin-bottom: 10px;
       border-radius: 5px;
 
+      /* Chrome, Safari, Edge, Opera */
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      &[type='number'],
+      &[type='date'] {
+        -moz-appearance: textfield;
+      }
+
       &:hover {
         border-color: rgba(34, 36, 38, 0.35);
       }
@@ -36,6 +50,7 @@ export const Wrapper = styled.div`
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
+      margin-bottom: 5px;
 
       > div {
         display: flex;

@@ -29,13 +29,9 @@ export default function Routes() {
       <Route path="/students/:id/edit" component={EditStudent} isPrivate />
 
       <Route path="/registrations" exact component={Registrations} isPrivate />
+      <Route path="/registrations/add" component={AddRegistration} isPrivate />
       <Route
-        path="/registrations/:id/add"
-        component={AddRegistration}
-        isPrivate
-      />
-      <Route
-        path="/registrations/edit"
+        path="/registrations/:id/edit"
         component={EditRegistration}
         isPrivate
       />
